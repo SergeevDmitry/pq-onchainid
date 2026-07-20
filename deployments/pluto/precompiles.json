@@ -1,0 +1,32 @@
+{
+  "chainId": 42,
+  "chainName": "eternax-pluto",
+  "rpc": [
+    "https://pluto-testnet.eternax.ai/rpc0",
+    "http://127.0.0.1:9944"
+  ],
+  "precompiles": {
+    "slhDsaVerify": {
+      "address": "0x0000000000000000000000000000000000000404",
+      "abi": "verify(bytes32,bytes,bytes)",
+      "scheme": 100,
+      "algorithm": "SLH-DSA-SHAKE-128s",
+      "publicKeyLen": 32,
+      "signatureLen": 7856
+    },
+    "mlDsaVerify": {
+      "address": "0x0000000000000000000000000000000000000405",
+      "abi": "verify(bytes,bytes,bytes)",
+      "scheme": 101,
+      "algorithm": "ML-DSA-65",
+      "publicKeyLen": 1952,
+      "signatureLen": 3309
+    }
+  },
+  "contracts": {
+    "PQClaimIssuer": {
+      "address": null,
+      "note": "Fill after public deploy; local test deploy is ephemeral"
+    }
+  }
+}

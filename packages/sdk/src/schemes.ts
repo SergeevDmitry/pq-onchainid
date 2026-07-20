@@ -1,0 +1,18 @@
+/** ERC-735 / EternaX claim signature scheme IDs */
+export const SCHEME = {
+  ECDSA: 1n,
+  SLH_DSA_SHAKE_128S: 100n,
+  ML_DSA_65: 101n,
+} as const
+
+export const PRECOMPILE = {
+  SLH_DSA_VERIFY: "0x0000000000000000000000000000000000000404",
+  ML_DSA_VERIFY: "0x0000000000000000000000000000000000000405",
+} as const
+
+export const SIZES = {
+  SLH_DSA_PK_LEN: 32,
+  SLH_DSA_SIG_LEN: 7856,
+  ML_DSA_65_PK_LEN: 1952,
+  ML_DSA_65_SIG_LEN: 3309,
+} as const
